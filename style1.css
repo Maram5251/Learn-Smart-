@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@media screen and (max-width: 768px) and (min-width:200px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    #home{
+         flex-direction: column; 
+         align-items: center; 
+    }
+    #contact-us{
+        margin: 0 !important;
+    }
+    footer,section {
+        width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .greeting,.title{
+        width: 200% !important;
+    }
+    .about-content,.courses{
+        width: 50% ;
+    }
+    .about-content{
+        width: 100%;
+    }
+    .contact-box,.signup-box,.login-box{
+        width: 100%;
+        height: 50%;
+    }
+    #contact-us{
+        margin-left: 25% !important;
+    }
+    #paragraph{
+        width: 100%;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --text-color: #FFC045;
+    --hover-color:white;
+    --bg-color:#374045;
+    --second-bg-color:#2C061F;
+    --big-font:2.5rem;
+    --norma-font:2rem;
+    --neon-box-shadow:0 0 0.5rem #E1D89F;
+    --h2-font:3rem;
+    --font-neon-text-shadow:0 0 10px rgb(216, 146, 22,0.3),
+    0 0 20px rgb(216, 146, 22,0.3),
+    0 0 30px rgb(216, 146, 22,0.3),
+    0 0 40px rgb(216, 146, 22,0.3),
+    0 0 60px rgb(216, 146, 22,0.3),
+    0 0 80px rgb(216, 146, 22,0.3),
+    0 0 100px rgb(216, 146, 22,0.3),
+    0 0 150px rgb(216, 146, 22,0.3);
+}
+
+body {
+    font-family:"poppins",sans-serif;
+    color: var(--text-color);
+    background-color:rgba(0, 0, 0, 0.8);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    width: 100%;
+    top: 0; 
+    z-index: 1000;
+    background-color:rgba(0, 0, 0, 0.8);
+    padding: 30px 100px;
+}
+.logo{
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-left: 10%;
+    background-color:#ffc14516;
+    border-radius: 10px;
+    box-shadow: var(--neon-box-shadow);
+    padding: 10px;
+    min-width: fit-content;
+    max-width: 100%;
+    height: auto;
+}
+a{
+    width: 100%;
+}
+.auth{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    width: 50%;
+    margin-left: 25%;
+}
+.logo:hover{
+    background-color: white;
+    color:#353941;
+    cursor: pointer;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: var(--hover-color);
+    text-shadow: var(--font-neon-text-shadow);
+    font-weight: bold;
+}
+#menu-icon{
+    font-size: 1.8rem;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    background: var(--hover-color);
+    border-radius: 3px;
+    color:var(--second-bg-color);
+    display: none;
+}
+.image-box{
+    width: fit-content;
+    height: auto;
+}
+.image-box img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.home-content{
+    width: 50%;
+    text-align: center;
+}
+.content{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+
+}
+#home{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-image: url('../images/bg.jpg') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#courses{
+    background-color:#110e01;
+    padding: 15%;
+}
+#About{
+    background-color:rgba(192, 167, 123, 0.3);
+    padding: 20%;
+}
+#contact{
+    background-color:rgba(185, 160, 132, 0.1);
+}
+#login{
+    width: 30%;
+    text-align: center;
+    margin: 10%;
+}
+#signup{
+    width: 30%;
+    text-align: center;
+    margin: 10%;
+}
+footer{
+    background-color: rgba(192, 167, 123, 0.3);
+    text-align: center;
+    padding: 20px;
+    font-size: x-large;
+    font-style: italic;
+}
+.course{
+   background-color: #2C061F;
+   color: #FFC045;
+   text-align: center;
+   box-shadow: 0px 4px 8px rgb(216, 146, 22,0.3);
+   border-radius: 10px;
+   cursor: pointer;
+   width: fit-content ;
+   height: auto;
+   margin: 5%;
+}
+.course img{
+    width: 100%;
+    height: auto;
+}
+.course-content{
+    padding: 8%;
+}
+.courses{
+    display: flex;
+    flex-direction: row;
+    gap : 0.05%;
+}
+.course:hover{
+    color: white;
+    background-color: #FFC045;
+}
+#About{
+    text-align: center;
+}
+.alert{
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 1.5%;
+    margin-left: 45%;
+    background-color: #2C061F;
+}
+.alert-container{
+    display: none;
+}
+.alert-icon{
+    font-weight: 500;
+    margin-top: 0.3em;
+    margin-right: 0.3em;
+}
+#ok-button{
+    margin-top: 0.3em;
+    padding: 5%;
+    font-size: 15px;
+    background-color: #374045;
+}
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+form{
+    height: 50%;
+    width: 50%;
+    background-color: rgba(6, 3, 1, 0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    margin-left: 25%;
+    border: 2px solid rgba(185, 160, 132, 0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(220, 202, 91, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+.social div:hover{
+  box-shadow: var(--neon-box-shadow);
+  cursor: pointer;
+}
+.social i{
+  margin-right: 4px;
+}
+
+
+#home .auth{
+    display: flex;
+    flex-direction: row;
+}
+.signup-box form{
+    height: 100%;
+    margin-top: 5%;
+}
+.signup form{
+    height: 100%
+}
+
+#signupbtn{
+   margin-top: 5%;
+}
+.close-login,.close-signup,.close-icon{
+    margin-top: 5%;
+    cursor: pointer;
+}
+.minimize-signup,.extend-signup{
+    margin-left: 100%;
+    cursor:pointer;
+}
+.title{
+    font-size: 70px;
+    margin-bottom: 10%;
+    background-color: rgba(1, 2, 17, 0.6);
+    width: 200%;
+}
+.greeting{
+    text-align: left;
+    font-size: 20px;
+    color: #e5e5e5;
+    text-shadow: 0 0 0 20px black;
+    background-color: rgba(18, 16, 8, 0.6);
+    padding: 5%;
+    width: 200%;
+}
+a{
+    text-decoration: none;
+}
+.contact .close-icon{
+    margin: 0;
+}
+.contact h1{
+    text-align: center;
+    font-size: 35px;
+    background-color: #e5e5e5;
+    color: #080710;
+    padding: 2%;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 15px;
+}
+.contact-content form{
+    background-color:rgba(6, 3, 1, 0.13) !important;
+}
+.contact-content input{
+    background-color: #e5e5e5;
+    color: black;
+    font-weight: bold;
+}
+#paragraph{
+    color: black !important;
+    font-weight: bold;
+    width: 100%;
+}
+.courses a{
+    color: #FFC045;
+}

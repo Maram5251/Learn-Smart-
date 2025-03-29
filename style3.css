@@ -1,0 +1,22 @@
+.intro{
+    margin: 10% 10% auto;
+    background-color: #FFC045;
+    padding: 2%;
+    width: 75%;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.intro h1{
+    text-align: center;
+    color: red;
+}
+body{
+    background: url('../images/Spanish-course.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+.content{
+    background: url(#) !important;
+    background-color: rgb(218, 12, 12) !important;
+}
