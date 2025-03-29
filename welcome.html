@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Smart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="styles/style1.css" rel="stylesheet">
+</head>
+<body>
+    <div class="alert-container">
+        <div class="alert">
+            <div class="alert-icon">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <div class="alert-text">
+                You should login first 
+            </div>
+            <div class="logo" id="ok-button">OK</div>    
+        </div>
+        
+    </div>
+    <header>
+    <div class="logo">Learn Smart</div>
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#About">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul></header>
+    <section id="home" class="home">
+        <div class="content">
+        <div class="home-content">
+            <h1 class="title">Learn Smart</h1>
+            <div class="greeting">
+            <h1>Hi!!</h1>
+            <h5>We're glad to see you here ..hope you find our web application helpful and interesting...</h5>
+            <p>
+                If you're a student who finds it hard concentrating on your studies,
+                feeling anxious and worried... Here's the solution. 
+                Learn smart is more than just a simple application, it'll be your guide
+                throughout your journey of learning.
+                This web application is designed for students who want to improve
+                their skills in different subjects such as French and more...
+            </p></div>   
+            <div class="auth">
+            <a href="#login-section"><div class="logo" id="login">Log In</div></a>
+            <a href="#signup-section"><div class="logo" id="signup">Sign Up</div></a></div>
+            <div class="image-box">
+            <img src="images/image2.png" alt="img2"></div></div>       
+    </section>
+    <section id="courses">
+            <div class="courses">
+            
+            <div class="course"  >
+            <div class="course-content" onclick="goToPageEnglishCourses()">
+            <img src="images/english-course.jpg" alt="img1">                
+           <h2>English Course</h2>
+                <p>Enroll Now</p></div>
+            </div>
+            
+            <div class="course"  >
+                <div class="course-content" onclick="goToPageSpanishQuiz()">
+                <img src="images/Spanish-course.jpg" alt="img1">                
+                    <h2>Spanish Quiz </h2>
+                    <p>Enroll Now</p></div>
+                </div>
+            
+            <div class="course">
+            <div class="course-content">
+                <img src="images/French-course.jpg" alt="img1">
+                    <h2>French Course (Not available yet)</h2>
+                <p>Enroll Now</p>
+            </div>
+        </div></a>
+    </div></section>
+            <section id="signup-section">
+            <div class="signup-box">
+                <form>
+                    <div class="extend-signup" onclick="goToPageSignUp()"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
+                    <h3>Sign Up Here</h3>
+                    
+                    <label for="signup-username">Username</label>
+                    <input type="text" placeholder="Username" id="signup-username" required>
+        
+                    <label for="signup-email">Email</label>
+                    <input type="email" placeholder="Email" id="signup-email" required>
+            
+                    <label for="signup-password1">Password</label>
+                    <input type="password" placeholder="Password" id="signup-password1" required>
+                    
+                    <label for="signup-password2">Repeat Password</label>
+                    <input type="password" placeholder="Password" id="signup-password2" required>
+        
+                    <button type="button" id="signupbtn" >Sign Up</button>
+                </form></div></section>
+                <section id="login-section">
+            <div class="login-box">
+            <form>
+                        <div class="extend-signup" onclick="goToPageLogin()"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
+                <h3>Login Here</h3>
+                
+                <label for="login-email">Email</label>
+                <input type="text" placeholder="Email" id="login-email" required>
+        
+                <label for="login-password">Password</label>
+                <input type="password" placeholder="Password" id="login-password" required>
+        
+                <button type="button" id="loginbtn" >Log In</button>
+                <div class="social">
+                  <div  type="button" class="go"><i class="fab fa-google"></i>  Google</div>
+                </div>
+            </form></div></section>
+    <section id="About" class="About">
+        <div class="about-content">
+            <h1>About us</h1>
+    <p>
+        The web application offers a high opportunity for students who extremely want to improve their grammar, speaking and writing in different languages 
+        by including courses followed by quizzes , it helps students revising and memorizing what they have learned and allow them to develop capacities by practicing what they learn ..
+        not just that the app offers also correction after each quiz , which allows students and anyone else to know , correct and learn from his mistakes..
+        what are you waiting for , if you are a student or someone who search for improving his skills in spanish , french or english , this app is the best for you 
+        so sign up from now and dive into this wonderful experience...
+        After being signed up and logged in , you'll be able to access courses online and you'll be able to complete quizzes online .. 
+        The app offers the opportunity to practice execices in French, English and Spanish ..
+        in Learn Smart you're also allowed to contact us if you have any problems or suggestions and at any time ..
+    </p>
+</div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+          <h1 id="contact-us">Contact Us</h1>
+            <div class="contact-content">
+            <div class="contact-box">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="77f825d6-c9a5-4056-9679-2d98494927a2">
+                <div class="close-icon"><i class="fa-sharp fa-solid fa-circle-xmark"></i></div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required ><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required ><br><br>
+        
+                <button type="button" id="contactbtn">Contact</button>
+                <button type="reset" id="resetbtn1">Reset</button>
+                
+            </form>
+            <div class="message" id="message" style="display:none;">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="77f825d6-c9a5-4056-9679-2d98494927a2">
+                    <div class="close-icon"><i class="fa-sharp fa-solid fa-circle-xmark"></i></div>
+                    <label for="paragraph">Write here:</label>
+                    <textarea id="paragraph" name="paragraph" rows="6" required></textarea>
+                    <button type="submit" id="sendbtn">Send</button>
+                    <button type="reset" id="resetbtn2">Reset</button>
+                    
+                </form>
+                
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+        import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+        import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyCw7hwh4pEw6LGsjQLAJhv7onEUgkvp3zM",
+            authDomain: "sign-up-7a0de.firebaseapp.com",
+            projectId: "sign-up-7a0de",
+            storageBucket: "sign-up-7a0de.firebasestorage.app",
+            messagingSenderId: "152028111242",
+            appId: "1:152028111242:web:cc1853ad145dd237902873",
+            measurementId: "G-BDRMHYXR1Y"
+        };
+    
+       
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+    
+        const provider = new GoogleAuthProvider();
+
+        document.querySelector('.go').addEventListener('click', () => {
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(auth, provider)
+                .then((result) => {
+                    
+                    const user = result.user;
+                    console.log("User signed in: ", user);
+    
+                   
+                    alert(`Welcome, ${user.displayName}`);
+                    loggedin=true;
+                })
+                .catch((error) => {
+                    
+                    console.error("Error signing in with Google: ", error.message);
+                    alert("Error during Google Sign-In. Please try again.");
+                });
+        });
+       const emailInput = document.getElementById("signup-email");
+       const passwordInput1 = document.getElementById("signup-password1");
+       const passwordInput2 = document.getElementById("signup-password2");
+       const signupButton = document.getElementById("signupbtn");
+       const usernameInput=document.getElementById("signup-username");
+        
+    signupButton.addEventListener("click", function(event) {
+        event.preventDefault(); 
+        const email = emailInput.value;
+        const password1 = passwordInput1.value.trim();
+        const password2 = passwordInput2.value.trim();
+        const username=usernameInput.value;
+        if (password1 === password2) {
+            createUserWithEmailAndPassword(auth, email, password1)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    alert("Sign-up successful! Welcome " + username);
+                    localStorage.setItem('isSignedUp', 'true');
+                    document.getElementsByClassName('signup-box')[0].style.display='none';
+                    
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    console.error("Error signing up: ", errorCode, errorMessage);
+                    alert(errorMessage);
+                });
+        } else {
+            console.log("Passwords do not match");
+            alert("Please ensure the passwords match.");
+        }
+});
+const loginEmailInput = document.getElementById("login-email");
+        const loginPasswordInput = document.getElementById("login-password");
+        const loginButton = document.getElementById("loginbtn");
+
+loginButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    const isSignedUp = localStorage.getItem('isSignedUp');
+    
+    if (!isSignedUp) {
+        alert("Please sign up first before logging in.");
+        return; 
+    }
+
+    const email = loginEmailInput.value.trim();
+    const password = loginPasswordInput.value.trim();
+
+    signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            const username = user.displayName || "";
+            alert(`Welcome back !`);
+            console.log(`User logged in ` );
+            loggedin=true;
+            document.getElementsByClassName('login-box')[0].style.display = 'none';
+        })
+        .catch((error) => {
+                alert(error.message);
+        });
+});
+    </script>
+    
+    <script src="scripts/script1.js"></script>
+    <footer>Learn Smart</footer>   
+</body>
+</html>

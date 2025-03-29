@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="styles/style1.css" rel="stylesheet">
+</head>
+<body>
+    <div class="signup">
+        <form>
+            <div class="close-signup" onclick="goToPageWelcome()"><i class="fa-sharp fa-solid fa-circle-xmark"></i></div>
+            <h3>Sign Up Here</h3>
+            
+            <label for="signup-username">Username</label>
+            <input type="text" placeholder="Username" id="signup-username" required>
+
+            <label for="signup-email">Email</label>
+            <input type="email" placeholder="Email" id="signup-email" required>
+    
+            <label for="signup-password1">Password</label>
+            <input type="password" placeholder="Password" id="signup-password1" required>
+            
+            <label for="signup-password2">Repeat Password</label>
+            <input type="password" placeholder="Password" id="signup-password2" required>
+
+            <button type="button" id="signupbtn" >Sign Up</button>
+        </form></div>
+    <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+    import { getAuth, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+    import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+    import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+    const firebaseConfig = {
+        apiKey: "AIzaSyCw7hwh4pEw6LGsjQLAJhv7onEUgkvp3zM",
+        authDomain: "sign-up-7a0de.firebaseapp.com",
+        projectId: "sign-up-7a0de",
+        storageBucket: "sign-up-7a0de.firebasestorage.app",
+        messagingSenderId: "152028111242",
+        appId: "1:152028111242:web:cc1853ad145dd237902873",
+        measurementId: "G-BDRMHYXR1Y"
+    };
+
+   
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth();
+   const emailInput = document.getElementById("signup-email");
+   const passwordInput1 = document.getElementById("signup-password1");
+   const passwordInput2 = document.getElementById("signup-password2");
+   const signupButton = document.getElementById("signupbtn");
+   const usernameInput=document.getElementById("signup-username");
+    
+signupButton.addEventListener("click", function(event) {
+    event.preventDefault(); 
+    const email = emailInput.value;
+    const password1 = passwordInput1.value.trim();
+    const password2 = passwordInput2.value.trim();
+    const username=usernameInput.value;
+    if (password1 === password2) {
+        createUserWithEmailAndPassword(auth, email, password1)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                alert("Sign-up successful! Welcome " + username);
+                localStorage.setItem('isSignedUp', 'true');
+                document.getElementsByClassName('signup-box')[0].style.display='none';
+                
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.error("Error signing up: ", errorCode, errorMessage);
+                alert(errorMessage);
+            });
+    } else {
+        console.log("Passwords do not match");
+        alert("Please ensure the passwords match.");
+    }
+});
+</script>
+<script src="scripts/script1.js"></script>
+</body>
+</html>
